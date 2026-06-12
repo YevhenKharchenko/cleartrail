@@ -11,13 +11,9 @@
   max-width: 375px;
 
   @include media(desktop) {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 72px;
+    padding-bottom: 72px;
     max-width: 1440px;
-    background-image: url(../img/about/about-bg-desk.png);
-    background-repeat: no-repeat;
-    background-position: bottom right;
-    background-size: auto;
   }
 }
 
@@ -32,21 +28,20 @@
   gap: 24px;
 
   @include media(desktop) {
-    flex-direction: row-reverse;
-    justify-content: start;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    gap: 72px;
   }
 }
 
 .about-text-wrapper {
   @include media(desktop) {
-    max-width: 526px;
+    max-width: 661px;
   }
 }
 
 .about-title {
-  margin-bottom: 12px;
+  margin-bottom: 4px;
 
   @include media(desktop) {
     text-align: left;
@@ -54,11 +49,11 @@
 }
 
 .about-text {
-  font-family: 'Lora', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #f6f6ff;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.73333;
+  color: #bebecd;
 
   @include media(desktop) {
   }
@@ -69,7 +64,7 @@
   margin-right: auto;
 
   @include media(desktop) {
-    min-width: 636px;
+    min-width: 139px;
     margin: 0;
   }
 }

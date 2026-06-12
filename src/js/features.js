@@ -10,7 +10,7 @@ featuresSwiper = new Swiper('.features-swiper-container', {
   direction: 'horizontal',
   loop: false,
   centeredSlides: true,
-  slidesPerView: 1,
+  slidesPerView: 'auto',
   slidesPerGroup: 1,
   initialSlide: 0,
   spaceBetween: 8,
@@ -32,6 +32,31 @@ featuresSwiper = new Swiper('.features-swiper-container', {
       document
         .querySelector('.features-swiper-container')
         .classList.add('show');
+      updateFeaturesArrows(swiper);
+    },
+    slideChange(swiper) {
+      updateFeaturesArrows(swiper);
+    },
+    reachEnd(swiper) {
+      updateFeaturesArrows(swiper);
+    },
+    reachBeginning(swiper) {
+      updateFeaturesArrows(swiper);
     },
   },
+});
+
+updateFeaturesArrows(featuresSwiper);
+
+function updateFeaturesArrows(swiper) {
+  featuresLeftArrow.disabled = swiper.isBeginning;
+  featuresRightArrow.disabled = swiper.isEnd;
+}
+
+featuresLeftArrow.addEventListener('click', () => {
+  featuresSwiper.slidePrev();
+});
+
+featuresRightArrow.addEventListener('click', () => {
+  featuresSwiper.slideNext();
 });
